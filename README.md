@@ -1,2 +1,2 @@
 # cpp-ml
-machine learning in C++
+dumping ground for various workshops and exercise for machine learning in C++.
