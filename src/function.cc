@@ -1,4 +1,4 @@
- # include <iostream>
+# include <iostream>
 
 int factorial(int n)
  {
@@ -17,6 +17,7 @@ void wrapper(int (*func)(int))
   std::cin >> x;
   std::cout << "factorial of " << x << " is " << func(x) << std::endl;
 }
+
 int main()
 {
   wrapper(factorial);
