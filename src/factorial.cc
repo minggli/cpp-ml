@@ -1,7 +1,6 @@
 #include <iostream>
 
-int factorial(int n)
- {
+int factorial(int n) {
    if (n > 1) {
      return n * factorial(n - 1);
    } else {
@@ -9,8 +8,7 @@ int factorial(int n)
    }
  }
 
-void wrapper(int (*func)(int))
-{
+void wrapper(int (*func)(int)) {
   std::cout << "Hello! This application calculates factorial." << std::endl;
   std::cout << "Enter a number: ";
   int x;
@@ -18,8 +16,7 @@ void wrapper(int (*func)(int))
   std::cout << "factorial of " << x << " is " << func(x) << std::endl;
 }
 
-int main()
-{
+int main() {
   wrapper(factorial);
   return 0;
 }
