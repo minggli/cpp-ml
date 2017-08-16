@@ -8,5 +8,5 @@ int readNumber() {
 }
 
 void writeAnswer(int x) {
-  std::cout << "The answer is :" << x << std::endl;
+  std::cout << "The answer is: " << x << std::endl;
 }
