@@ -9,6 +9,6 @@ from the user, adds them together, and then outputs the answer.
 // void writeAnswer(int x);
 
 int main() {
-  writeAnswer(readNumber() + readNumber());
-  return 0;
+    writeAnswer(readNumber() + readNumber());
+    return 0;
 }
