@@ -3,32 +3,21 @@
 */
 
 #include <iostream>
-#include <list>
-#include <algorithm>
+#include "lib.h"
 
-float getNumber() {
-    std::cout << "Please enter a numeric value: " << std::endl;
-    float val;
-    std::cin >> val;
-    return val;
-}
-
-bool in_sequence(int val, std::list<int> array) {
-    return std::find(array.begin(), array.end(), val) != array.end();
-}
 
 int getOperation() {
     int op;
-    bool is_valid = false;
-    int valid_ops[4] = {1, 2, 3, 4};
-    std::list <int> valid_list \
-        (valid_ops, valid_ops + sizeof(valid_ops) / sizeof(int));
+    bool isValid = false;
+    int validOps[4] = {1, 2, 3, 4};
+    std::list <int> validList \
+        (validOps, validOps + sizeof(validOps) / sizeof(int));
 
-    while (!is_valid) {
+    while (!isValid) {
         std::cout << "Please enter which operator you want " << \
                      "(1 = +, 2 = -, 3 = *, 4 = /): " << std::endl;
         std::cin >> op;
-        is_valid = in_sequence(op, valid_list);
+        isValid = inSequence(op, validList);
     }
     return op;
 }
