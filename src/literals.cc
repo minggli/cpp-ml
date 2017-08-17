@@ -1,9 +1,13 @@
 // play ground for literal constants
 #include <iostream>
 
+const double GRAVITY(9.8);
+
 
 int main() {
-    // binary uses 0b11011 = 27; octal uses 012 = 10; hexademcial 0xFF = 255
+    // binary uses 0b11011 = 27;
+    // octal uses 012 = 10;
+    // hexademcial 0xFF = 255
     int hex(0);
     hex = 0x01;
     std::cout << hex << std::endl;
