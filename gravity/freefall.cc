@@ -1,6 +1,5 @@
 // toy programme where ball drops
 #include <iostream>
-#include <cmath>
 #include "constants.h"
 
 uint16_t heightTower() {
@@ -12,11 +11,10 @@ uint16_t heightTower() {
 }
 
 float fallenDistance(uint16_t sec) {
-    return myConstants::G * std::pow(sec, 2) / 2;
+    return myConstants::G * sec * sec / 2;
 }
 
 void heightPrint(uint16_t sec, float h) {
-    // std::cout << std::setprecision(1)
     if (h > 0) {
     std::cout << "At " << sec << " seconds, the ball is at height: " << h <<
                  " meters\n";
@@ -28,7 +26,7 @@ void heightPrint(uint16_t sec, float h) {
 int main() {
     const uint16_t hTower(heightTower());
     uint16_t s(0);
-    float h;
+    float h; // unsigned h will cause overflow and infinite while loop.
     do {
         h = hTower - fallenDistance(s);
         heightPrint(s, h);
