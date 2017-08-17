@@ -1,5 +1,6 @@
 // toy programme where ball drops
 #include <iostream>
+#include <cmath>
 #include "constants.h"
 
 uint16_t heightTower() {
@@ -11,7 +12,7 @@ uint16_t heightTower() {
 }
 
 float fallenDistance(uint16_t sec) {
-    return myConstants::G * sec * sec / 2;
+    return myConstants::G * std::pow(sec, 2) / 2;
 }
 
 void heightPrint(uint16_t sec, float h) {
@@ -31,7 +32,7 @@ int main() {
     do {
         h = hTower - fallenDistance(s);
         heightPrint(s, h);
-        s += 1;
+        ++s; //pre-increment add 1 and assign to s i.e. s += 1
     } while (h > 0);
     return 0;
 }
