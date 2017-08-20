@@ -2,6 +2,7 @@
 #define CONSTANT_H
 
 namespace myConstants {
-    const double G(9.8);
+    extern const double G;
 }
+
 #endif
