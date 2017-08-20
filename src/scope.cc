@@ -4,13 +4,13 @@ using namespace std;
 void test() {
     uint16_t x;
     x = 20;
-    std::cout << x << std::endl;
+    cout << x << endl;
     {
         uint16_t x;
         x = 30;
-        std::cout << x << std::endl;
+        cout << x << endl;
     }
-    std::cout << x << std::endl;
+    cout << x << endl;
 }
 
 
